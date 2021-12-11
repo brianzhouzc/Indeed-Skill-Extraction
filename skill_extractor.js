@@ -31,8 +31,8 @@ const usage = commandLineUsage([
     {
         header: 'Synopsis',
         content: [
-            '$ node extract_skills {bold --source} {underline /path/to/dir/} {bold --destination} {underline /path/to/dir/}',
-            '$ node extract_skills {bold -s} {underline /path/to/dir/} {bold -d} {underline /path/to/dir/}'
+            '$ node skill_extractor {bold --source} {underline /path/to/dir/} {bold --destination} {underline /path/to/dir/}',
+            '$ node skill_extractor {bold -s} {underline /path/to/dir/} {bold -d} {underline /path/to/dir/}'
         ]
     },
     {
@@ -182,7 +182,7 @@ if (options.help || (!options.source && !options.description)) {
     }
     var csv_writer = csv.createArrayCsvWriter(
         {
-            path: join(__dirname, options.destination, 'bhattacharyya_coefficient.csv'),
+            path: join(__dirname, options.destination, 'bhattacharyya.csv'),
             header: ['job_1', 'job_2', 'bhattacharyya_coefficient']
         }
     )
