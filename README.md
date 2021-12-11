@@ -62,10 +62,12 @@ $ npm install
 You've completed the setup.
 
 ### Usage
-The project contains 3 independent scripts: `indeed_scraper.js`, `skill_extractor.js` and `helper.js`. Each script contains it's own usage guide.
+The project contains 3 independent scripts: `indeed_scraper.js`, `skill_extractor.js` and `helper.js`. Each script contains it's own usage guide that's accessable by passing the `--help` argument when executing.
+
+The visualization of the data depends on [Observable](observablehq.com) and requires manual processing of the data. All code related to visualization/graph is hosted on Observable and can be found here: https://observablehq.com/@brianzhouzc. This repositry only contains a simple webpage that display the graphs from Observable in a organized manner.
 
 ### indeed_scraper
-To get started, run `node indeed_scraper`. See #Testing section of this documentation for a real example.
+To get started, run `node indeed_scraper`. See [Testing Procedure](https://github.com/brianzhouzc/Indeed-Skill-Extraction#testing-procedures) section of this documentation for a real example.
 ```
 >$ node indeed_scraper
 
@@ -104,9 +106,9 @@ Optional arguments
 ```
 
 ### skill_extractor
-To get started, run `node skill_extractor`. See #Testing section of this documentation for a real example.
+To get started, run `node skill_extractor`. See [Testing Procedure](https://github.com/brianzhouzc/Indeed-Skill-Extraction#testing-procedures) section of this documentation for a real example.
 ```
->$node skill_extractor
+>$ node skill_extractor
 
 Skill Extractor
 
@@ -127,10 +129,34 @@ Arguments
 ```
 
 ### helper
-asd
+The helper script is meant to serve two purposes: To calculate the amount of duplicate contains in the scraped data as well as removing them from the data.
+
+To get started, run `node helper`:
+```
+>$ node helper
+
+Helper
+
+  Small helper to calculate number of postings in a file, as well as removing
+  duplicates.
+
+Synopsis
+
+  $ node helper -m stats <-s string>
+  $ node helper --mode clean <--src string>
+
+Options
+
+  --help                Display this usage guide.
+  -m, --mode string     Required. Either stats (display information of the file) or clean (remove
+                        duplicates from the file)
+  -s, --source string   Required. Path to the json file
+```
 
 ### visualization
+The view the pre-generated graphs, simply open `visualization/index.html` with any modern browser, or visit https://brianzhouzc.github.io/visualization/.
 
+To generate your own graphs with your own data, please see the Pipeline section in this documentation.
 
 ## Testing Procedures
 All testing are done manually. Due to time limit and practicality, I wasn't able to implement automated unit testing.
