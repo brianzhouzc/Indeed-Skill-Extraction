@@ -26,42 +26,52 @@
     <section class="hero is-info">
         <div class="tabs is-boxed is-centered main-menu" id="nav">
             <ul>
+                <li data-target="pane-0" id="0">
+                    <a>
+                        <span>Info</span>
+                    </a>
+                </li>
                 <li data-target="pane-1" id="1" class="is-active">
                     <a>
-                        <span>Skills & Job Titles</span>
+                        <span>Skills & Job Titles - Sankey</span>
                     </a>
                 </li>
                 <li data-target="pane-2" id="2">
                     <a>
-                        <span>Software Developer</span>
+                        <span>Skills & Job Titles - Chord</span>
                     </a>
                 </li>
                 <li data-target="pane-3" id="3">
                     <a>
-                        <span>Data Scientist</span>
+                        <span>Software Developer</span>
                     </a>
                 </li>
                 <li data-target="pane-4" id="4">
                     <a>
-                        <span>Electronic Engineer</span>
+                        <span>Data Scientist</span>
                     </a>
                 </li>
                 <li data-target="pane-5" id="5">
                     <a>
-                        <span>Finance</span>
+                        <span>Electronic Engineer</span>
                     </a>
                 </li>
                 <li data-target="pane-6" id="6">
                     <a>
-                        <span>Project Manager</span>
+                        <span>Finance</span>
                     </a>
                 </li>
                 <li data-target="pane-7" id="7">
                     <a>
-                        <span>Clerk</span>
+                        <span>Project Manager</span>
                     </a>
                 </li>
                 <li data-target="pane-8" id="8">
+                    <a>
+                        <span>Clerk</span>
+                    </a>
+                </li>
+                <li data-target="pane-9" id="9">
                     <a>
                         <span>Customer Support</span>
                     </a>
@@ -72,12 +82,20 @@
             <div class="tab-pane is-active" id="pane-1">
                 <div class="tab-pane-title">
                     <h1 class="title has-text-dark">
-                        Relationship between skills and jobs
+                        Relationship between skills and jobs - Sankey Diagram
                     </h1>
                 </div>
                 <div id="observablehq-chart-96e916e8"></div>
             </div>
-            <div class="tab-pane" id="pane-2">
+            <div class="tab-pane" id="pane-2" style="width:70%; margin:auto;">
+                <div class="tab-pane-title">
+                    <h1 class="title has-text-dark">
+                        Relationship between skills and jobs - Chord Diagram
+                    </h1>
+                </div>
+                <div id="observablehq-chart-9614742a"></div>
+            </div>
+            <div class="tab-pane" id="pane-3">
                 <div class="tab-pane-title">
                     <h1 class="title has-text-dark">
                         Word Cloud: Software Development Egineer
@@ -85,7 +103,7 @@
                 </div>
                 <div id="observablehq-sdechart-68b9e8b9"></div>
             </div>
-            <div class="tab-pane" id="pane-3">
+            <div class="tab-pane" id="pane-4">
                 <div class="tab-pane-title">
                     <h1 class="title has-text-dark">
                         Word Cloud: Data Scientist
@@ -93,7 +111,7 @@
                 </div>
                 <div id="observablehq-dschart-68b9e8b9"></div>
             </div>
-            <div class="tab-pane" id="pane-4">
+            <div class="tab-pane" id="pane-5">
                 <div class="tab-pane-title">
                     <h1 class="title has-text-dark">
                         Word Cloud: Electronic Engineer
@@ -101,7 +119,7 @@
                 </div>
                 <div id="observablehq-eechart-68b9e8b9"></div>
             </div>
-            <div class="tab-pane" id="pane-5">
+            <div class="tab-pane" id="pane-6">
                 <div class="tab-pane-title">
                     <h1 class="title has-text-dark">
                         Word Cloud: Finance
@@ -109,7 +127,7 @@
                 </div>
                 <div id="observablehq-financechart-68b9e8b9"></div>
             </div>
-            <div class="tab-pane" id="pane-6">
+            <div class="tab-pane" id="pane-7">
                 <div class="tab-pane-title">
                     <h1 class="title has-text-dark">
                         Word Cloud: Project Manager
@@ -117,7 +135,7 @@
                 </div>
                 <div id="observablehq-pmchart-68b9e8b9"></div>
             </div>
-            <div class="tab-pane" id="pane-7">
+            <div class="tab-pane" id="pane-8">
                 <div class="tab-pane-title">
                     <h1 class="title has-text-dark">
                         Word Cloud: Clerk
@@ -125,7 +143,7 @@
                 </div>
                 <div id="observablehq-clerkchart-68b9e8b9"></div>
             </div>
-            <div class="tab-pane" id="pane-8">
+            <div class="tab-pane" id="pane-9">
                 <div class="tab-pane-title">
                     <h1 class="title has-text-dark">
                         Word Cloud: Customer Support
