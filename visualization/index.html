@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Bulma - Tabs</title>
+    <title>Job Skills Visualization</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
     <!-- Bulma Version 0.9.0-->
     <link rel='stylesheet prefetch' href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,7 +20,6 @@
                 Job Skills Data Visualization
             </h2>
             <p style="margin:auto; width:100%; text-align: right;">
-                Code avaliable at: https://observablehq.com/@brianzhouzc/
             </p>
         </div>
     </nav>
@@ -78,6 +79,16 @@
             </ul>
         </div>
         <div class="tab-content">
+            <div class="tab-pane" id="pane-0">
+                <p>The graphs are split into two parts: the relationship diagrams and the word clouds.</p>
+                <p>The Sankey and Chord diagram shows the relationship between different skills and different job
+                    titles. It shows how jobs share the same skill sets as well as having it's own unique skill
+                    requirements.</p>
+                <p>The Word Cloud diagrams shows what skills are the most sought-after for each job title. It shows the
+                    frequency of each skill appearing in the job postings</p>
+                <p>Interact with the graph to see more details on the data! Hovering over elements highlights the
+                    relationship and occurrences of each skill.</p>
+            </div>
             <div class="tab-pane is-active" id="pane-1">
                 <div class="tab-pane-title">
                     <h1 class="title has-text-dark">
