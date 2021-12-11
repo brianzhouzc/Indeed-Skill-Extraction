@@ -66,8 +66,8 @@ The project contains 3 independent scripts: `indeed_scraper.js`, `skill_extracto
 
 ### indeed_scraper
 To get started, run `node indeed_scraper`. See #Testing section of this documentation for a real example.
-```bash
-$ node indeed_scraper
+```
+>$ node indeed_scraper
 
 Indeed Scraper
 
@@ -105,8 +105,8 @@ Optional arguments
 
 ### skill_extractor
 To get started, run `node skill_extractor`. See #Testing section of this documentation for a real example.
-```bash
-$node skill_extractor
+```
+>$node skill_extractor
 
 Skill Extractor
 
