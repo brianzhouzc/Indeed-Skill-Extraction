@@ -67,6 +67,34 @@ The project contains 3 independent scripts: `indeed_scraper.js`, `skill_extracto
 asd
 
 
+## Testing Procedures
+All testing are done manually. Due to time limit and practicality, I wasn't able to implement automated unit testing.
+
+### indeed_scraper.js
+Testing the job scraper is kinda tricky, this is due to the fact that Indeed.com might rate-limit us at anytime. We can avoid rate limitation by adjusting the delay between each query, but this is all trial-and-error since nothing is and should be documented about how indeed's rate limitation works.
+
+Testing the summary scraping function, with job title Software Developer, and 100 job posting limit:
+```bash
+$ node indeed_scraper -m summary -j 'Software Developer' --dest 'data/summary/SDE.json' -t 100
+```
+And examine both the terminal output as well as the output file. The script outputs the current scrape index so in the event of rate-limitation, we can wait a few hours and use the `--start` option to resume scraping with the previous index.
+
+Testing the description scraping function, this dependes on the previously scraped summary:
+```bash
+$ node indeed_scraper -m description --src 'data/summary/SDE.json' --dest 'data/description/SDE.json'
+```
+And do the same as we did with the summary function.
+
+### skill_extractor.js
+Tested manually by running:
+```bash
+$ node skill_extractor -s 'data/description' - d 'data/skills_raw'
+```
+And examine the output csv files. The script should output the same amount of csv files as the provided job descriptions, as well as an addtional `bhattacharyya.csv` file which contains the bhattacharyya coefficient for every pair of job titles.
+
+### visualization
+No testing is neccessary - it either produce a graph or doesn't.
+
 ## Credits
 ### Node.js dependencies
 - https://www.npmjs.com/package/cheerio
