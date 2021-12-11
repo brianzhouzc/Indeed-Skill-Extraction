@@ -65,7 +65,71 @@ You've completed the setup.
 The project contains 3 independent scripts: `indeed_scraper.js`, `skill_extractor.js` and `helper.js`. Each script contains it's own usage guide.
 
 ### indeed_scraper
+To get started, run `node indeed_scraper`. See #Testing section of this documentation for a real example.
+```bash
+$ node indeed_scraper
+
+Indeed Scraper
+
+  A scraper that scrapes both summary as well as detailed description from
+  Indeed.
+
+Synopsis
+
+  $ node indeed_scraper -m summary <-j string> <--dest string>
+  $ node indeed_scraper -m description <--src string> <--dest string>
+
+Options
+
+  --help              Display this usage guide.
+  -m, --mode string   Required. Scraping mode. Either summary or description
+
+Required arguments
+
+  -j, --job string   Job title to query Indeed with. (Required for summary mode)
+  --src string       Source file containing the scraped summary. (Required for description mode)
+  --dest string      Destination file to put the results in.
+
+Optional arguments
+
+  -h, --host string         Url to query Indeed with. [default: ca.indeed.com]
+  -l, --location string     Location of the job posting. [default: Canada]
+  -r, --radius km           Search radius. [default: 25]
+  -s, --start number        The start index of the search. [default: 0]
+  -d, --delay ms ...        The delay between each query. Use one number to set a fix delay or two
+                            numbers [min, max] to get a random delay in that range. [default:
+                            [15000,30000]]
+  -q, --querylimit number   The maximum amount to scrape per query. [default: 50]
+  -t, --totallimit number   The total amount of postings to scrape. [default: 10000]
+```
+
+### skill_extractor
+To get started, run `node skill_extractor`. See #Testing section of this documentation for a real example.
+```bash
+$node skill_extractor
+
+Skill Extractor
+
+  Extract skills from Indeed postings
+
+Synopsis
+
+  $ node skill_extractor --source /path/to/dir/ --destination /path/to/dir/
+  $ node skill_extractor -s /path/to/dir/ -d /path/to/dir/
+
+Arguments
+
+  -h, --help                 Display this usage guide.
+  -s, --source string        Source directory containing all Indeed posting descriptions.
+  -d, --destination string   Destination directory to put all results in.
+  -t, --threshold number     Default: 20. Threshold to what will be consider as a skill. Any terms with
+                             frequency < threshold will be discarded.
+```
+
+### helper
 asd
+
+### visualization
 
 
 ## Testing Procedures
