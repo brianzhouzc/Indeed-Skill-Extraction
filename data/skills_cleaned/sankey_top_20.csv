@@ -1,0 +1,141 @@
+source,target,frequency,value
+c,Software Development Engineer,558,61
+javascript,Software Development Engineer,513,56
+software development,Software Development Engineer,505,55
+sql,Software Development Engineer,431,47
+automation,Software Development Engineer,348,38
+aws,Software Development Engineer,335,36
+python,Software Development Engineer,291,32
+devops,Software Development Engineer,263,28
+best practices,Software Development Engineer,262,28
+js,Software Development Engineer,261,28
+communication skills,Software Development Engineer,261,28
+ci,Software Development Engineer,229,25
+problem solving,Software Development Engineer,211,23
+apis,Software Development Engineer,206,22
+git,Software Development Engineer,206,22
+ui,Software Development Engineer,167,18
+ability work,Software Development Engineer,163,17
+kubernetes,Software Development Engineer,160,17
+work remotely,Software Development Engineer,156,17
+docker,Software Development Engineer,153,16
+machine learning,Data Scientist,1256,289
+analytics,Data Scientist,1305,216
+python,Data Scientist,530,87
+sql,Data Scientist,435,72
+statistic,Data Scientist,335,55
+visualization,Data Scientist,300,49
+deep learning,Data Scientist,218,36
+r,Data Scientist,213,35
+communication skills,Data Scientist,202,33
+big data,Data Scientist,170,28
+aws,Data Scientist,169,28
+artificial intelligence,Data Scientist,157,26
+best practices,Data Scientist,153,25
+data driven,Data Scientist,151,25
+dashboard,Data Scientist,150,24
+problem solving,Data Scientist,147,24
+c,Data Scientist,145,24
+tensorflow,Data Scientist,141,23
+tableau,Data Scientist,137,22
+datasets,Data Scientist,136,22
+c,Electronic Engineer,345,51
+communication skills,Electronic Engineer,271,40
+automation,Electronic Engineer,252,37
+problem solving,Electronic Engineer,184,27
+supplier,Electronic Engineer,183,27
+software development,Electronic Engineer,178,26
+product development,Electronic Engineer,170,25
+validation,Electronic Engineer,151,22
+firmware,Electronic Engineer,146,21
+fast paced,Electronic Engineer,144,21
+schematic,Electronic Engineer,134,19
+python,Electronic Engineer,134,19
+siemens,Electronic Engineer,127,18
+cad,Electronic Engineer,118,17
+project management,Electronic Engineer,110,16
+technical support,Electronic Engineer,108,16
+work remotely,Electronic Engineer,106,15
+vendor,Electronic Engineer,105,15
+control systems,Electronic Engineer,97,14
+fpga,Electronic Engineer,95,14
+communication skills,Finance,211,38
+cpa,Finance,189,34
+mortgage,Finance,162,29
+financial reporting,Finance,161,29
+financial services,Finance,158,28
+forecast,Finance,153,27
+payroll,Finance,150,27
+fast paced,Finance,140,25
+attention to detail,Finance,131,23
+problem solving,Finance,130,23
+financial statements,Finance,129,23
+financial analyst,Finance,128,23
+risk management,Finance,127,23
+real estate,Finance,126,22
+reconciliation,Finance,124,22
+accountability,Finance,109,19
+decision making,Finance,105,19
+lending,Finance,103,18
+vaccination,Finance,99,18
+financial analysis,Finance,96,17
+communication skills,Project Manager,290,38
+vendor,Project Manager,246,33
+scheduling,Project Manager,208,27
+problem solving,Project Manager,208,27
+project coordination,Project Manager,201,26
+fast paced,Project Manager,161,21
+management skills,Project Manager,156,20
+time management,Project Manager,142,19
+work remotely,Project Manager,138,18
+construction management,Project Manager,132,17
+consult,Project Manager,124,16
+best practices,Project Manager,123,16
+microsoft office,Project Manager,118,15
+accountability,Project Manager,115,15
+interpersonal skills,Project Manager,110,14
+attention to detail,Project Manager,109,14
+vaccination,Project Manager,109,14
+organizational skills,Project Manager,109,14
+invoicing,Project Manager,102,13
+construction project,Project Manager,96,12
+customer service,Clerk,471,55
+work remotely,Clerk,279,33
+microsoft office,Clerk,174,29
+communication skills,Clerk,223,26
+invoicing,Clerk,212,25
+attention to detail,Clerk,207,24
+fast paced,Clerk,193,22
+data entry,Clerk,187,22
+administrative support,Clerk,153,18
+scheduling,Clerk,151,17
+time management,Clerk,140,16
+outlook,Clerk,132,15
+work independently,Clerk,130,15
+payroll,Clerk,126,14
+vendor,Clerk,126,14
+real estate,Clerk,118,13
+organizational skills,Clerk,114,13
+vaccination,Clerk,113,13
+word,Clerk,110,13
+excel,Clerk,110,13
+customer service,Customer Support,1418,158
+communication skills,Customer Support,298,33
+work remotely,Customer Support,262,29
+fast paced,Customer Support,252,28
+problem solving,Customer Support,168,18
+attention to detail,Customer Support,137,15
+scheduling,Customer Support,127,14
+microsoft office,Customer Support,117,13
+team player,Customer Support,115,12
+time management,Customer Support,110,12
+interpersonal skills,Customer Support,103,11
+outlook,Customer Support,96,10
+written skills,Customer Support,92,10
+verbal skills,Customer Support,92,10
+service skills,Customer Support,91,10
+multi-task,Customer Support,90,10
+management skills,Customer Support,89,9
+organizational skills,Customer Support,74,8
+accountability,Customer Support,74,8
+vendor,Customer Support,73,8
