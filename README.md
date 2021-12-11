@@ -30,6 +30,7 @@
 │   │   ├── bhattacharyya.csv   # Bhattacharyya Coefficient
 │   │   └── <job_title>.csv     # All extracted skills for each job title
 │   └── skills_cleaned          # Contains all extracted skills. Manually cleaned.
+│       ├── top_20.csv          # Top 20 skills from each job postings. Manually created.
 │       └── <job_title>.csv     # All extracted skills for each job title
 ├── backup                      # Backups for all scrapped data. Ordered by date/time
 │   └── ...
