@@ -179,7 +179,7 @@ Repeat the same with `Data Scientist`:
 $ node indeed_scraper --mode summary --job 'Data Scientist' --dest 'summary/DS.json' --total 100
 ```
 
-### Stage 2: Scraping Description
+### Step 2: Scraping Description
 Next, once we have scraped the summary and obtained the results, we can start scraping the detailed description of the job posting. To do this, run:
 ```
 $ node indeed_scraper --mode description --src 'summary/SDE.json' --dest 'description/SDE.json'
@@ -191,23 +191,47 @@ Repeat the same with `Data Scientist`:
 $ node indeed_scraper --mode description --src 'summary/DS.json' --dest 'description/DS.json'
 ```
 
-### Stage 3: Extracting Skills
+### Step 3: Extracting Skills
 Once we have the description, we can extract the skills and calculate the bhattacharyya coefficient. Run:
 ```
 $ node skill_extractor --source 'description' --destination 'skills_raw'
 ```
 This will read every file in the directory `description` and extract the skills from it, then write the result into the directory `skills_raw` with the same filename. In this case, `SDE.csv` and `DS.csv` will be generated. A file call `bhattacharyya.csv` will also be generated which contains te bhattacharyya coefficient of every pair of job titles.
 
-### Stage 4: Manual Processing
+### Step 4: Manual Processing
 Once the skills has been extracted, we need to manually process the result to remove irrelavent skill terms. We do this by opening the csv files generated in the previous step with Excel or a text editor and remove terms we find that doesn't make sense. Since there's likely to be hundreds or even thousands of terms extracted, it's unreleastic to go over them all. What I normally do is make sure the top 20 skills contains no terms that doesn't make sense (i.e delete any terms that doesn't make sense until the the top 20 terms is valid skills). Repeat for every csv file. It normally takes ~1 minute for me to process each file.
 
-### Stage 5: Visualization
+### Step 5: Visualization
 Visualization is a very complicated process. It will require changing code and modifying data manually! If you plan to do this step yourself, be warn that there might be a lot of fiddling before you are able to get it working.
+
+Alternatively, just visit https://brianzhouzc.github.io/visualization/ and view the graphs directly :)
 
 I'll split the Visualization into two parts, the word clouds, and the relationship diagrams.
 
 #### Word Clouds
+Word clouds are a lot easier to work with comparing to the relationship diagrams. To start, visit https://observablehq.com/@brianzhouzc/wordcloud. This notebook contains all the D3.js code required for generating the wordcloud.
 
+Once on the page, navigate to the section that asks you to choose an csv file. Click on the button and select one of the csv file we manually cleaned in the previous step.
+
+Voilà, enjoy your new beautiful word cloud!
+
+#### Relationship Diagrams
+Relationship diagrams are way more involved. I will go over the Sankey diagram here. The Chord diagram requires extensive modifying so I won't get into it here.
+
+First, we have to create a new csv file. This csv file will contain the top 20 skills of all the job titles. Let's name it `top_20.csv`
+
+The header of `top_20.csv` should be:
+```csv
+source,target,frequency,value
+```
+
+Next, use a text editor to open the csv files you manually cleaned in the previous step. Copy the top 20 entires and past them into `top_20.csv`. Be careful not to copy the headers!
+
+Once that is done, visit https://observablehq.com/@brianzhouzc/sankey. Similar to be for, navigate to the section that prompts you to select an csv file. Click the button and select the `top_20.csv` we just created.
+
+Voilà, enjoy your new sankey diagram!
+
+If you feel like experimenting, here's the link to the Chord Diagram notebook: https://observablehq.com/@brianzhouzc/jobskills_chord
 
 </br>
 
