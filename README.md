@@ -1,4 +1,9 @@
 # Indeed-Skill-Extraction
+<p align="center">My final project for the COSC 329 Learning Analytics course. Written in Node.js and D3.js.</p>
+<p align="center">Features include Indeed.com scraping, skill extraction, as well as data visualization</p>
+<p align="center">
+    <img src="https://github.com/brianzhouzc/Indeed-Skill-Extraction/blob/main/img/chord.png" alt="Chord Chart" width="600"/>
+</p>
 
 ## Features
 - Scrape and extract job postings from Indeed.com
