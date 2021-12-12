@@ -6,6 +6,20 @@
     <img src="https://github.com/brianzhouzc/Indeed-Skill-Extraction/blob/main/img/chord.png" alt="Chord Chart" width="600"/>
 </p>
 
+<p align="center">Table of Contents</p>
+<p align="center">
+    <a href="#features">Features</a> • 
+    <a href="#nlp-functions--skill-extraction-algorithm">NLP functions & Skill Extraction Algorithm</a> • 
+    <a href="#setup">Setup</a> • 
+    <a href="#usage">Usage</a> • 
+    <a href="#pipeline">Pipeline</a> • 
+    <a href="#orginal-project-plan-and-timeline">Orginal Project Plan and Timeline</a> • 
+    <a href="#file-structure">File Structure</a> • 
+    <a href="#testing-procedures">Testing Procedures</a> • 
+    <a href="#bugs-and-know-issues">Bugs and Know Issues</a> • 
+    <a href="#dredits">Credits</a> • 
+</p>
+
 ## Features
 - Scrape and extract job postings from Indeed.com
 - Identify and extract job skills from job postings
@@ -62,7 +76,7 @@ The project contains 3 independent scripts: `indeed_scraper.js`, `skill_extracto
 The visualization of the data depends on [Observable](observablehq.com) and requires manual processing of the data. All code related to visualization/graph is hosted on Observable and can be found here: https://observablehq.com/@brianzhouzc. This repositry only contains a simple webpage that display the graphs from Observable in a organized manner.
 
 ### indeed_scraper
-To get started, run `node indeed_scraper`. See [Testing Procedure](https://github.com/brianzhouzc/Indeed-Skill-Extraction#testing-procedures) section of this documentation for a real example.
+To get started, run `node indeed_scraper`. See [Testing Procedure](#testing-procedures) section of this documentation for a real example.
 ```
 >$ node indeed_scraper
 
@@ -101,7 +115,7 @@ Optional arguments
 ```
 
 ### skill_extractor
-To get started, run `node skill_extractor`. See [Testing Procedure](https://github.com/brianzhouzc/Indeed-Skill-Extraction#testing-procedures) section of this documentation for a real example.
+To get started, run `node skill_extractor`. See [Testing Procedure](#testing-procedures) section of this documentation for a real example.
 ```
 >$ node skill_extractor
 
