@@ -263,7 +263,7 @@ If you feel like experimenting, here's the link to the Chord Diagram notebook: h
 ├── skill_extractor.js                # Script for extracting skills
 ├── helper.js                         # Script for misc. functions
 ├── stopwords.txt                     # Custom set of stopwords
-├── data
+├── data                              # Contains all data
 │   ├── summary                       # Contains all scraped summaries
 │   │   └── <job_title>.json          # Job posting summary for each job title
 │   ├── description                   # Contains all scraped descriptions
