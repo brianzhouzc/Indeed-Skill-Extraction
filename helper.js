@@ -75,15 +75,18 @@ if (options.help) {
 
     if (fs.existsSync(join(__dirname, options.source)) && fs.lstatSync(join(__dirname, options.source)).isDirectory()) {
         var total = 0;
+        var total_dupe = 0;
         for (var file of fs.readdirSync(options.source)) {
             var summary_file = join(__dirname, options.source, file);
             var summary_adapter = new JSONFile(summary_file)
             var summary_db = new Low(summary_adapter)
             await summary_db.read();
             console.log('Processing', file);
-            total += process(summary_db);
+            var r = process(summary_db);
+            total += r[0];
+            total_dupe += r[1];
         }
-        console.log('Total scraped posting: ' + total);
+        console.log('Total scraped posting: ' + total + ". Total dupe postings: " + total_dupe);
     } else if (fs.existsSync(join(__dirname, options.source)) && fs.lstatSync(join(__dirname, options.source)).isFile()) {
         var summary_file = join(__dirname, options.source);
         var summary_adapter = new JSONFile(summary_file)
@@ -127,6 +130,6 @@ if (options.help) {
             console.log("└ Total posts: " + (dupe_indexes.length + summary_db.data.postings.length) + ". Duplicates: " + dupe_indexes.length)
         }
 
-        return dupe_indexes.length + summary_db.data.postings.length;
+        return [dupe_indexes.length + summary_db.data.postings.length, dupe_indexes.length];
     }
 }
