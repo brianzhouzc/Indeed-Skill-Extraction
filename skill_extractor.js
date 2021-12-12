@@ -20,7 +20,7 @@ const options = commandLineArgs([
     { name: 'help', alias: 'h', type: Boolean },
     { name: 'source', alias: 's', type: String },
     { name: 'destination', alias: 'd', type: String },
-    { name: 'threshold', alias: 't', type: Number, defaultValue: 20 }
+    { name: 'threshold', alias: 't', type: Number, defaultValue: 6 }
 ]);
 
 const usage = commandLineUsage([
@@ -58,7 +58,7 @@ const usage = commandLineUsage([
             },
             {
                 name: 'threshold',
-                description: 'Default: 20. Threshold to what will be consider as a skill. Any terms with frequency < threshold will be discarded.',
+                description: 'Default: 6. Threshold to what will be consider as a skill. Any terms with frequency < threshold will be discarded.',
                 alias: 't',
                 type: Number
             }
@@ -68,6 +68,12 @@ const usage = commandLineUsage([
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const winknlp = winkNLP(model);
+const custom_stopwords = fs.readFileSync(join(__dirname, 'stopwords.txt')).toString().split("\n").map(
+    function (item) {
+        return item.trim();
+    }
+);
+
 
 if (options.help || (!options.source && !options.description)) {
     console.log(usage);
@@ -109,7 +115,8 @@ if (options.help || (!options.source && !options.description)) {
 
                 //Extract nouns vis POS. Also lemmatize the noun.
                 var nouns = sentencedoc.tokens().filter(
-                    (t) => t.out(its.pos) === 'NOUN' && !t.out(its.stopWordFlag) && (words.getWordRank(t.out(its.lemma)) > 10000 || words.getWordRank(t.out(its.lemma)) < 0)
+                    (t) => t.out(its.pos) === 'NOUN' && !t.out(its.stopWordFlag) && !custom_stopwords.includes(t.out(its.lemma))
+                        && (words.getWordRank(t.out(its.lemma)) > 10000 || words.getWordRank(t.out(its.lemma)) < 0)
                 ).out(its.lemma, as.array);
 
                 //Extract bigrams.
@@ -119,7 +126,8 @@ if (options.help || (!options.source && !options.description)) {
 
                 bigrams.forEach(bigram => {
                     bigram = bigram.join(' ');
-                    freq.get(bigram) ? freq.set(bigram, freq.get(bigram) + 1) : freq.set(bigram, 1);
+                    if (!custom_stopwords.includes(bigram))
+                        freq.get(bigram) ? freq.set(bigram, freq.get(bigram) + 1) : freq.set(bigram, 1);
                 });
 
                 nouns.forEach(noun => {
@@ -141,7 +149,7 @@ if (options.help || (!options.source && !options.description)) {
         for (var i = 0; i < sorted_skills.size; i++) {
             var entry = entires.next();
             var normalized = Math.floor((entry.value[1] / db.data.postings.length) * 100);
-            if (entry.value[1] < options.threshold)
+            if (normalized < options.threshold)
                 break;
             csv_arr.push([entry.value[0], name, entry.value[1], normalized]);
             temp[entry.value[0]] = normalized;
