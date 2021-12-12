@@ -17,7 +17,7 @@
     <a href="#file-structure">File Structure</a> • 
     <a href="#testing-procedures">Testing Procedures</a> • 
     <a href="#bugs-and-know-issues">Bugs and Know Issues</a> • 
-    <a href="#dredits">Credits</a> • 
+    <a href="#dredits">Credits</a>
 </p>
 
 ## Features
