@@ -258,25 +258,26 @@ If you feel like experimenting, here's the link to the Chord Diagram notebook: h
 ## File Structure
 ```graphql
 /root/
-├── README.md                   # Documentation file 
-├── indeed_scraper.js           # Script to scrape Indeed.com
-├── skill_extractor.js          # Script for extracting skills
-├── helper.js                   # Script for misc. functions
+├── README.md                         # Documentation file 
+├── indeed_scraper.js                 # Script to scrape Indeed.com
+├── skill_extractor.js                # Script for extracting skills
+├── helper.js                         # Script for misc. functions
+├── stopwords.txt                     # Custom set of stopwords
 ├── data
-│   ├── summary                 # Contains all scraped summaries
-│   │   └── <job_title>.json    # Job posting summary for each job title
-│   ├── description             # Contains all scraped descriptions
-│   │   └── <job_title>.json    # Job posting description for each job title
-│   ├── skills_raw              # Contains all extracted skills. Not manually reviewed
-│   │   ├── bhattacharyya.csv   # Bhattacharyya Coefficient
-│   │   └── <job_title>.csv     # All extracted skills for each job title
-│   └── skills_cleaned          # Contains all extracted skills. Manually cleaned.
-│       ├── top_20.csv          # Top 20 skills from each job postings. Manually created.
-│       └── <job_title>.csv     # All extracted skills for each job title
-├── backup                      # Backups for all scrapped data. Ordered by date/time
+│   ├── summary                       # Contains all scraped summaries
+│   │   └── <job_title>.json          # Job posting summary for each job title
+│   ├── description                   # Contains all scraped descriptions
+│   │   └── <job_title>.json          # Job posting description for each job title
+│   ├── skills_raw                    # Contains all extracted skills. Not manually reviewed
+│   │   ├── bhattacharyya.csv         # Bhattacharyya Coefficient
+│   │   └── <job_title>.csv           # All extracted skills for each job title
+│   └── skills_cleaned                # Contains all extracted skills. Manually cleaned.
+│       ├── top_20.csv                # Top 20 skills from each job postings. Manually created.
+│       └── <job_title>.csv           # All extracted skills for each job title
+├── backup                            # Backups for all scrapped data. Ordered by date/time
 │   └── ...
-└── visualization               # Contains all code for data visualization
-    ├── index.html              # Data visualization page
+└── visualization                     # Contains all code for data visualization
+    ├── index.html                    # Data visualization page
     └── ...
 ```
 
