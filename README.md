@@ -11,7 +11,6 @@
 - Identify and extract job skills from job postings
 - Visualize the data in logical and pleasing way
 
-<br>
 
 ## NLP functions & Skill Extraction Algorithm
 The NLP library I decided to use is [winkJS](https://winkjs.org/). The functions I used to pre-process the texts are:
@@ -32,7 +31,6 @@ All unigrams and bigrams are then stored in a frequency table. Once all postings
 
 Finally, all remaining unigrams and bigrams are written to a csv file along with it's frequency and normalized ratio.
 
-<br>
 
 ## Setup
 This project is developed with Node.js. Hence, you must have Node.js installed on your system to run the scripts. Additionally, you will need npm to install all the required packages.
@@ -57,7 +55,6 @@ $ npm install
 
 You've completed the setup.
 
-</br>
 
 ## Usage
 The project contains 3 independent scripts: `indeed_scraper.js`, `skill_extractor.js` and `helper.js`. Each script contains it's own usage guide that's accessable by passing the `--help` argument when executing.
@@ -156,7 +153,6 @@ The view the pre-generated graphs, simply open `visualization/index.html` with a
 
 To generate your own graphs with your own data, please see the Pipeline section in this documentation.
 
-</br>
 
 ## Pipeline
 The general pipeline of this project is shown below:
@@ -233,7 +229,6 @@ Voilà, enjoy your new sankey diagram!
 
 If you feel like experimenting, here's the link to the Chord Diagram notebook: https://observablehq.com/@brianzhouzc/jobskills_chord
 
-</br>
 
 ## Orginal Project Plan and Timeline
 - Week 9: Setup github repo and research on available libraries and languages
@@ -243,7 +238,6 @@ If you feel like experimenting, here's the link to the Chord Diagram notebook: h
 - Week 13: Finish the majority of the functions and make a presentation video
 - Week 14: Finish all remaining tasks (bug fixes and unfinished features) and submit all deliverables.
 
-</br>
 
 ## File Structure
 ```graphql
@@ -269,7 +263,7 @@ If you feel like experimenting, here's the link to the Chord Diagram notebook: h
     ├── index.html              # Data visualization page
     └── ...
 ```
-</br>
+
 
 ## Testing Procedures
 All testing are done manually. Due to time limit and practicality, I wasn't able to implement automated unit testing.
@@ -299,7 +293,6 @@ And examine the output csv files. The script should output the same amount of cs
 ### visualization
 No testing is neccessary - it either produce a graph or doesn't.
 
-</br>
 
 ## Bugs and Know Issues
 ### < 10,000 Job posting data
@@ -356,7 +349,6 @@ Indeed.com rate limits my scraper after a certain amount of requests are made in
 
 In rare cases, when scraping the description, we will encounter an invalid URL. The script have the ability to handle most cases in which it will simply skip scraping said job posting. But sometimes the script might mistaken an invalid url as a valid one and try to make request to it. When this happens, the script will throw an error and exit. 
 
-<br>
 
 ## Credits
 ### Node.js dependencies
